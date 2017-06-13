@@ -1,6 +1,6 @@
 package beans;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class User {
 	private int id;
@@ -9,7 +9,7 @@ public class User {
 	private String address;
 	private long tel;
 	private String mail;
-	private Date registerDate;
+	private Timestamp registerDate;
 	private String password;
 	private int libraryId;
 	private int isAdmin;
@@ -25,7 +25,158 @@ public class User {
 	private long reservedBook9;
 	private long reservedBook10;
 	private long reservedBook11;
-
+	private long reservedBook12;
+	private long reservedBook13;
+	private long reservedBook14;
+	private long reservedBook15;
+	private long reservedBook16;
+	private long reservedBook17;
+	private long reservedBook18;
+	private long reservedBook19;
+	private long reservedBook20;
+	private Timestamp reservedTime1;
+	private Timestamp reservedTime2;
+	private Timestamp reservedTime3;
+	private Timestamp reservedTime4;
+	private Timestamp reservedTime5;
+	private Timestamp reservedTime6;
+	private Timestamp reservedTime7;
+	private Timestamp reservedTime8;
+	private Timestamp reservedTime9;
+	private Timestamp reservedTime10;
+	private Timestamp reservedTime11;
+	private Timestamp reservedTime12;
+	private Timestamp reservedTime13;
+	private Timestamp reservedTime14;
+	private Timestamp reservedTime15;
+	private Timestamp reservedTime16;
+	private Timestamp reservedTime17;
+	private Timestamp reservedTime18;
+	private Timestamp reservedTime19;
+	private Timestamp reservedTime20;
+	public Timestamp getReservedTime1() {
+		return reservedTime1;
+	}
+	public void setReservedTime1(Timestamp reservedTime1) {
+		this.reservedTime1 = reservedTime1;
+	}
+	public Timestamp getReservedTime2() {
+		return reservedTime2;
+	}
+	public void setReservedTime2(Timestamp reservedTime2) {
+		this.reservedTime2 = reservedTime2;
+	}
+	public Timestamp getReservedTime3() {
+		return reservedTime3;
+	}
+	public void setReservedTime3(Timestamp reservedTime3) {
+		this.reservedTime3 = reservedTime3;
+	}
+	public Timestamp getReservedTime4() {
+		return reservedTime4;
+	}
+	public void setReservedTime4(Timestamp reservedTime4) {
+		this.reservedTime4 = reservedTime4;
+	}
+	public Timestamp getReservedTime5() {
+		return reservedTime5;
+	}
+	public void setReservedTime5(Timestamp reservedTime5) {
+		this.reservedTime5 = reservedTime5;
+	}
+	public Timestamp getReservedTime6() {
+		return reservedTime6;
+	}
+	public void setReservedTime6(Timestamp reservedTime6) {
+		this.reservedTime6 = reservedTime6;
+	}
+	public Timestamp getReservedTime7() {
+		return reservedTime7;
+	}
+	public void setReservedTime7(Timestamp reservedTime7) {
+		this.reservedTime7 = reservedTime7;
+	}
+	public Timestamp getReservedTime8() {
+		return reservedTime8;
+	}
+	public void setReservedTime8(Timestamp reservedTime8) {
+		this.reservedTime8 = reservedTime8;
+	}
+	public Timestamp getReservedTime9() {
+		return reservedTime9;
+	}
+	public void setReservedTime9(Timestamp reservedTime9) {
+		this.reservedTime9 = reservedTime9;
+	}
+	public Timestamp getReservedTime10() {
+		return reservedTime10;
+	}
+	public void setReservedTime10(Timestamp reservedTime10) {
+		this.reservedTime10 = reservedTime10;
+	}
+	public Timestamp getReservedTime11() {
+		return reservedTime11;
+	}
+	public void setReservedTime11(Timestamp reservedTime11) {
+		this.reservedTime11 = reservedTime11;
+	}
+	public Timestamp getReservedTime12() {
+		return reservedTime12;
+	}
+	public void setReservedTime12(Timestamp reservedTime12) {
+		this.reservedTime12 = reservedTime12;
+	}
+	public Timestamp getReservedTime13() {
+		return reservedTime13;
+	}
+	public void setReservedTime13(Timestamp reservedTime13) {
+		this.reservedTime13 = reservedTime13;
+	}
+	public Timestamp getReservedTime14() {
+		return reservedTime14;
+	}
+	public void setReservedTime14(Timestamp reservedTime14) {
+		this.reservedTime14 = reservedTime14;
+	}
+	public Timestamp getReservedTime15() {
+		return reservedTime15;
+	}
+	public void setReservedTime15(Timestamp reservedTime15) {
+		this.reservedTime15 = reservedTime15;
+	}
+	public Timestamp getReservedTime16() {
+		return reservedTime16;
+	}
+	public void setReservedTime16(Timestamp reservedTime16) {
+		this.reservedTime16 = reservedTime16;
+	}
+	public Timestamp getReservedTime17() {
+		return reservedTime17;
+	}
+	public void setReservedTime17(Timestamp reservedTime17) {
+		this.reservedTime17 = reservedTime17;
+	}
+	public Timestamp getReservedTime18() {
+		return reservedTime18;
+	}
+	public void setReservedTime18(Timestamp reservedTime18) {
+		this.reservedTime18 = reservedTime18;
+	}
+	public Timestamp getReservedTime19() {
+		return reservedTime19;
+	}
+	public void setReservedTime19(Timestamp reservedTime19) {
+		this.reservedTime19 = reservedTime19;
+	}
+	public Timestamp getReservedTime20() {
+		return reservedTime20;
+	}
+	public void setReservedTime20(Timestamp reservedTime20) {
+		this.reservedTime20 = reservedTime20;
+	}
+	public void setRegisterDate(Timestamp registerDate) {
+		this.registerDate = registerDate;
+	}
 	public int getId() {
 		return id;
 	}
@@ -158,15 +309,6 @@ public class User {
 	public void setReservedBook20(long reservedBook20) {
 		this.reservedBook20 = reservedBook20;
 	}
-	private long reservedBook12;
-	private long reservedBook13;
-	private long reservedBook14;
-	private long reservedBook15;
-	private long reservedBook16;
-	private long reservedBook17;
-	private long reservedBook18;
-	private long reservedBook19;
-	private long reservedBook20;
 	public long getCardNumber() {
 		return cardNumber;
 	}
@@ -197,17 +339,14 @@ public class User {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-	public Date getRegisterDate() {
-		return registerDate;
-	}
-	public void setRegisterDate(Date registerDate) {
-		this.registerDate = registerDate;
-	}
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Timestamp getRegisterDate() {
+		return registerDate;
 	}
 	public int getLibraryId() {
 		return libraryId;
