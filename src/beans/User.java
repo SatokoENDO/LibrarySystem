@@ -9,7 +9,10 @@ public class User {
 	private String address;
 	private long tel;
 	private String mail;
-	private Timestamp registerDate;
+	private Timestamp registerTime;
+	public Timestamp getRegisterTime() {
+		return registerTime;
+	}
 	private String password;
 	private int libraryId;
 	private int isAdmin;
@@ -54,6 +57,7 @@ public class User {
 	private Timestamp reservedTime18;
 	private Timestamp reservedTime19;
 	private Timestamp reservedTime20;
+
 	public Timestamp getReservedTime1() {
 		return reservedTime1;
 	}
@@ -174,8 +178,8 @@ public class User {
 	public void setReservedTime20(Timestamp reservedTime20) {
 		this.reservedTime20 = reservedTime20;
 	}
-	public void setRegisterDate(Timestamp registerDate) {
-		this.registerDate = registerDate;
+	public void setRegisterTime(Timestamp registerTime) {
+		this.registerTime = registerTime;
 	}
 	public int getId() {
 		return id;
@@ -345,9 +349,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Timestamp getRegisterDate() {
-		return registerDate;
-	}
+
 	public int getLibraryId() {
 		return libraryId;
 	}
