@@ -10,9 +10,6 @@ public class User {
 	private long tel;
 	private String mail;
 	private Timestamp registerTime;
-	public Timestamp getRegisterTime() {
-		return registerTime;
-	}
 	private String password;
 	private int libraryId;
 	private int isAdmin;
@@ -180,6 +177,9 @@ public class User {
 	}
 	public void setRegisterTime(Timestamp registerTime) {
 		this.registerTime = registerTime;
+	}
+	public Timestamp getRegisterTime() {
+		return registerTime;
 	}
 	public int getId() {
 		return id;
