@@ -9,37 +9,37 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import beans.Lib;
+import beans.Library;
 import exception.SQLRuntimeException;
 
 public class LibraryDao {
 
-	public List<Lib> getLibList(Connection connection) {
+	public List<Library> getLibraryList(Connection connection) {
 
 		try {
 			Statement statement = connection.createStatement();
 			String mySql = "select * from libraries";
 			ResultSet rs = statement.executeQuery(mySql);
-			List<Lib> libList = toLibList(rs);
-			if (libList.isEmpty() == true) {
+			List<Library> libraryList = toLibraryList(rs);
+			if (libraryList.isEmpty() == true) {
 				return null;
 			} else {
-				return libList;
+				return libraryList;
 			}
 		} catch (SQLException e) {
 			throw new SQLRuntimeException(e);
 		}
 	}
 
-	private List<Lib> toLibList(ResultSet rs) throws SQLException {
+	private List<Library> toLibraryList(ResultSet rs) throws SQLException {
 
-		List<Lib> ret = new ArrayList<Lib>();
+		List<Library> ret = new ArrayList<Library>();
 		try {
 			while (rs.next()) {
 				int id = rs.getInt("id");
 				String name = rs.getString("name");
 
-				Lib library = new Lib();
+				Library library = new Library();
 				library.setId(id);
 				library.setName(name);
 

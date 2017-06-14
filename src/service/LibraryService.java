@@ -6,19 +6,19 @@ import static utils.DBUtil.*;
 import java.sql.Connection;
 import java.util.List;
 
-import beans.Lib;
+import beans.Library;
 import dao.LibraryDao;
 
 public class LibraryService {
 
-	public List<Lib> getLibList() {
+	public List<Library> getLibraryList() {
 
 		Connection connection = null;
 		try {
 			connection = getConnection();
 
 			LibraryDao listDao = new LibraryDao();
-			List<Lib> ret = listDao.getLibList(connection);
+			List<Library> ret = listDao.getLibraryList(connection);
 
 			commit(connection);
 
