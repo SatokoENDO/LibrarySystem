@@ -1,22 +1,14 @@
 package controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import org.apache.commons.lang.StringUtils;
-
-import service.BookService;
-import beans.Book;
-
-@WebServlet(urlPatterns = { "/registration.jsp" })
+@WebServlet(urlPatterns = { "/registration" })
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -32,7 +24,7 @@ public class RegistrationServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 
-		List<String> messages = new ArrayList<String>();
+		/*List<String> messages = new ArrayList<String>();
 
 		HttpSession session = request.getSession();
 		if (isValid(request, messages) == true) {
@@ -72,7 +64,7 @@ public class RegistrationServlet extends HttpServlet {
 			return true;
 		} else {
 			return false;
-		}
+		}*/
 	}
 
 }

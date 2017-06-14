@@ -37,17 +37,11 @@
 
 		<form action="registration" method="post">
 <table class="registration">
-	<tr>
-		<th>図書館番号</th><td><select name="libraryId">
-				<c:forEach items="${libraries}" var="library">
-						<option value="${library.id}">
-							<c:out value="${library.name}" />
-						</option>
-				</c:forEach>
-			</select></td>
+<tr>
+		<th>図書館番号</th><td><input type="text" name="libraryNumber" value="${libraryNumber}" /></td>
 	</tr>
 	<tr>
-		<th>棚番号</th><td><input type="text" name="shelfNumber" value="${libraryId}" /></td>
+		<th>棚番号</th><td><input type="text" name="shelfNumber" value="${shelfNumber}" /></td>
 	</tr>
 	<tr>
 		<th>ISBN</th><td><input type="text" name="ISBN" value="${ISBN}"/></td>
@@ -60,13 +54,7 @@
 	<tr>
 	<th>出版者名</th><td><input type="text" name="publisherName" value="${publisherName}" /></td>
 	<tr>
-	<th>書類種類</th><td><select name="libraryId">
-				<c:forEach items="${librariess}" var="library">
-						<option value="${library.id}">
-							<c:out value="${library.name}" />
-						</option>
-				</c:forEach>
-			</select></td>
+		<th>書類種類</th><td><input type="text" name="kind" value="${kind}" /></td>
 	</tr>
 	</table>
 
