@@ -1,5 +1,7 @@
 package dao;
 
+import static utils.CloseableUtil.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,6 +16,7 @@ public class BookDao {
 		try {
 			StringBuilder mySql = new StringBuilder();
 			mySql.append("insert into books (");
+			mySql.append("id");
 			mySql.append("library_id");
 			mySql.append(", shelf_number");
 			mySql.append(", isbn");
@@ -22,7 +25,8 @@ public class BookDao {
 			mySql.append(", publisher_name");
 			mySql.append(", kind");
 			mySql.append(") values (");
-			mySql.append("?");
+			mySql.append("null");
+			mySql.append(", ?");
 			mySql.append(", ?");
 			mySql.append(", ?");
 			mySql.append(", ?");
@@ -44,9 +48,8 @@ public class BookDao {
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			throw new SQLRuntimeException(e);
-		} finally {
+		} finally{
 			close(ps);
 		}
 	}
-
 }

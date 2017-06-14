@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -9,25 +8,26 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import org.apache.commons.lang.StringUtils;
+import service.LibraryService;
+import beans.Lib;
 
-import service.BookService;
-import beans.Book;
-
-@WebServlet(urlPatterns = { "/registration" })
+@WebServlet(urlPatterns = { "/registration.jsp" })
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		List<Lib> library = new LibraryService().getLibList();
+		request.setAttribute("libraries", library);
+		System.out.println('a');
+		System.out.println(library.size());
 
 		request.getRequestDispatcher("registration.jsp").forward(request, response);
 	}
 
-	@Override
+	/*@Override
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
@@ -73,6 +73,6 @@ public class RegistrationServlet extends HttpServlet {
 		} else {
 			return false;
 		}
-	}
+	}*/
 
 }
